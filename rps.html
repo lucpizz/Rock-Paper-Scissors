@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+
+<html lang="en-us"></html>
+<!--
+    1.  Prompt user to enter r, p, or s. (use varibles to store the input)
+    2.  Use a random value in a list of r, p, or s. (use a random list (Array?))
+    3.  Determine if the user wins or not ... (if statements)
+    4.  Determine the score ... (if user wins then..)
+
+    note: loops, if-else statements, arrays, alerts, etc.
+
+    var num = Math.floor(Math.random() * 10) + 1;
+
+    for (var i = 0; i < vegetables.length; i++) {
+        console.log("I love " + vegetables[i]);
+-->
+
+<script>
+
+
+var playerMove = prompt ("Please enter r for Rock, p for Paper, or s for Scissors");
+var compMove = "";
+var r = 1;
+var p = 2;
+var s = 3;
+
+var scorePlayer = [0];
+var scoreComp = [0];
+var scoreTie = [0];
+
+
+
+for (var i = 0; i < 10; i++) {
+
+    var playerMove = prompt ("Please enter r for Rock, p for Paper, or s for Scissors");
+
+    compMove = Math.floor(Math.random() * 3) + 1;
+
+    console.log(compMove);
+
+
+if(playerMove === 1 && compMove === 1 || playerMove === 2 && compMove === 2 || playerMove === 3 && compMove === 3) {
+    scoreTie[0]++;
+
+    alert("You tied!" + compMove);
+
+}
+
+else (playerMove === r && compMove === p || playerMove === s && compMove === r || playerMove === p && compMove ===  s); {
+     scoreComp[0]++;
+
+     alert("Computer Wins!" + compMove);
+ }   
+
+elseif (playerMove === r && compMove === s || playerMove === p && compMove === r || playerMove === s && compMove === p); {
+    scorePlayer[0]++;
+
+    alert("Player Wins!" + compMove);
+}
+
+console.log("Computer score: " + scoreComp + " Players score: " + scorePlayer + " Players ties: " + scoreTie);
+
+}
+
+console.log("Computer score: " + scoreComp + " Players score: " + scorePlayer + " Players ties: " + scoreTie);
+
+
+</script>
+
+
+
+</html>
+
